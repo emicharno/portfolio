@@ -25,7 +25,7 @@
 body {
     font: 100%/1.5 system-ui; /* 100% font size, 1.5 line height, system font. Same as in lab 1 */
     max-width: 50rem; /* Limits width to 50 rems for better readability */
-    /* Add here margin-inline */
+    margin-inline: auto
     /* Add here padding around the body */
 }
 
@@ -118,7 +118,7 @@ label { /* We'll add the spacing between labels here */
              For example:
     */
     #resume { /* Use this # as your ID selector */ 
-        max-width: 100ch;
+        max-width: 50rem;
         /* ... */ 
     }
     
