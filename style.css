@@ -24,8 +24,8 @@
 */
 body {
     font: 100%/1.5 system-ui; /* 100% font size, 1.5 line height, system font. Same as in lab 1 */
-    max-width: 50rem; /* Limits width to 50 rems for better readability */
-    margin-inline: auto
+    max-width: 100ch; /* Limits width to 50 rems for better readability */
+    margin-inline: max(1em, (100% - 100ch) / 2);
     /* Add here padding around the body */
 }
 
