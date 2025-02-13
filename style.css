@@ -118,7 +118,7 @@ label { /* We'll add the spacing between labels here */
              For example:
     */
     #resume { /* Use this # as your ID selector */ 
-        max-width: 50rem;
+        max-width: 100ch;
         /* ... */ 
     }
     
