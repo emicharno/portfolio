@@ -1,0 +1,86 @@
+
+:root {
+    --color-accent: oklch(65% 50% 0); /* Primary accent color in OKLCH format */
+    --border-gray: oklch(80% 3% 200); /* Gray for borders */
+    /* ADD the rest of the color definitions here if needed! */
+}
+
+nav {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-around; /* Distributes items evenly */
+    align-items: center; /* Centers items vertically */
+    padding: 10px 0; /* Adds some spacing around the navigation */
+    margin-bottom: 20px; /* Adds some spacing below the navigation */  
+    border-bottom: 1px solid var(--border-gray); /* Adds a border at the bottom */
+}
+
+
+/* Step 2.3: Style navigation links for each element <a> */
+nav a {
+    flex: 1 !important;
+    text-align: center !important;
+    padding: 10px !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+}
+    /* NOTE: please make sure that in each index.html page you add class="current" to the current page*/
+        /* For example:  <a href="index.html" class="current">Home</a> */ 
+
+
+        nav a.current {
+            color: #000; /* Black text */
+            border-bottom: 0.4em solid var(--color-accent); /* Accent color border */
+            padding-bottom: 0.1em; /* Adds some spacing below the text */
+        }        
+
+/* Before jumping to the next step, remember to complete wtep 2.3 by editing 'nav' */
+
+/* 
+   Step 2.4: Accent color and hover styles
+*/
+nav a:hover {
+    background-color: oklch(65% 50% 0 / 15%);
+    color:black
+}
+
+h1, h2 {
+    font-family: "Helvetica", sans-serif;
+}
+
+p, nav, a {
+    font-family: "Helvetica", sans-serif;
+}
+/* STEP 1: Typography */
+body {
+    font-family: "Helvetica", sans-serif; /* Body text font */
+    line-height: 1.6; /* Better readability */
+    color: #333; /* Dark gray text */
+    background-color: #fff; /* White background */
+}
+
+/* Headings (using a bolder font) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif; /* Bold font for headings */
+    font-weight: bold;
+}
+
+/* STEP 2: Spacing and Margins */
+section {
+    margin: 20px 0; /* Consistent margins around sections */
+    padding: 20px;
+}
+
+/* STEP 3: Color Scheme */
+section, body {
+    color: #333; /* Dark gray text */
+    background-color: #fff; /* White background */
+}
+
+
+/* STEP 4: Section Dividers */
+section {
+    border-bottom: 1px solid #ddd; /* Subtle bottom border to separate sections */
+    background-color: #f9f9f9; /* Light background shading for sections */
+}

@@ -116,6 +116,11 @@ grid-row: span 3;
 
 h2 {
     margin: 0;
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 400%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -129,10 +134,10 @@ h1, h2, h3, h4, h5, h6 {
              and then you can generate a layour just for your resume
              For example:
     */
-    #resume { /* Use this # as your ID selector */ 
-        max-width: 50rem;
+/*#resume { /* Use this # as your ID selector */ 
+        /*max-width: 50rem;
         /* ... */ 
-    }
+/*    }
     
 
     
