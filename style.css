@@ -47,7 +47,7 @@ nav a {
 
         nav a.current {
             color: #000; /* Black text */
-            border-bottom: 0.4em solid var(--color-accent); /* Accent color border */
+            border-bottom: 0.4em solid var(--border-gray); /* Accent color border */
             padding-bottom: 0.1em; /* Adds some spacing below the text */
         }        
 
@@ -58,6 +58,7 @@ nav a {
 */
 nav a:hover {
     background-color: oklch(65% 50% 0 / 15%);
+    border-bottom: 0.4em solid var(--color-accent);
     color:black
 }
 
@@ -80,21 +81,26 @@ button {
 }
 
 /* Step 3.2: Top-down layout */
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    max-width: 50rem;
+    margin: auto;
+ }
 
-label, input, textarea, button { /* We define the elements in which we want this to take effect */
+ label { /* We'll add the spacing between labels here */
+    margin-block: 0.5rem;
+    align-self: center;
+}
+
+input, textarea, button { /* We define the elements in which we want this to take effect */
     display: block;
     width: 100%;
     box-sizing: border-box;
 }
-label { /* We'll add the spacing between labels here */
-    margin-block: 0.5rem;
-}
+
 /* Step 3.2: Grid layout */
- form {
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-column: 1 / -1  /* Two columns: auto for labels, 1fr for inputs */
- }
 
 /* STEP 4: Style your projects page */
 img {

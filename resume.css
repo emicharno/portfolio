@@ -52,7 +52,7 @@ h1, h2 {
 p, nav, a {
     font-family: "Helvetica", sans-serif;
 }
-/* STEP 1: Typography */
+/* STEP 3.1: Typography */
 body {
     font-family: "Helvetica", sans-serif; /* Body text font */
     line-height: 1.6; /* Better readability */
@@ -83,4 +83,11 @@ section, body {
 section {
     border-bottom: 1px solid #ddd; /* Subtle bottom border to separate sections */
     background-color: #f9f9f9; /* Light background shading for sections */
+}
+
+
+
+h1 {
+    font-size: 400%;
+    color: var(--color-accent);
 }
