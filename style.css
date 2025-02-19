@@ -74,34 +74,47 @@ p, nav, a {
 
 /* Step 3.1: Integrate typography */
     /* (you do not need to make any changes here for step 2.1, but please take note of it!) */
-input,
-textarea,
-button {
-    font: inherit; /* Ensures form elements use the same font as the body */
-}
+    input,
+    textarea,
+    button {
+        font: inherit; /* Ensures form elements use the same font as the body */
+    }
+    
+    /* Step 3.2: Top-down layout */
+    
+    label, input, textarea, button { /* We define the elements in which we want this to take effect */
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-/* Step 3.2: Top-down layout */
-form {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1rem;
-    max-width: 50rem;
-    margin: auto;
- }
+    label { /* We'll add the spacing between labels here */
+     margin-block: 0.5rem;
+    }
+    
+    /* Step 3.2: Grid layout */
 
- label { /* We'll add the spacing between labels here */
-    margin-block: 0.5rem;
-    align-self: center;
-}
+    form {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
 
-input, textarea, button { /* We define the elements in which we want this to take effect */
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-}
+    label {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1 / -1;
+        align-self: center;;
+    }
 
-/* Step 3.2: Grid layout */
+    input, textarea, button {
+        grid-column: 2;
+        align-self: start;
+    }
 
+    button {
+        grid-column: 1 / -1; /* Makes the button span across both columns */
+        justify-self: start; /* Aligns button to the left */
+    }
 /* STEP 4: Style your projects page */
 img {
     max-width: 100%;
