@@ -1,7 +1,9 @@
 // STEP 1
 console.log("IT’S ALIVE!");
 
-// TODO: Add the $$ function here!
+function $$ (selector, context = document) {
+	return Array.from(context.querySelectorAll(selector));
+}
 
 // STEP 2
 // 2.1
