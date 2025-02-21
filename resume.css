@@ -2,6 +2,7 @@
 :root {
     --color-accent: oklch(65% 50% 0); /* Primary accent color in OKLCH format */
     --border-gray: oklch(80% 3% 200); /* Gray for borders */
+    color-scheme: light dark;
     /* ADD the rest of the color definitions here if needed! */
 }
 

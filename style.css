@@ -1,13 +1,18 @@
 
 :root {
+   --font-primary: "Helvetica Light", "Helvetica", Arial, sans-serif; /* Primary font */
     --color-accent: oklch(65% 50% 0); /* Primary accent color in OKLCH format */
     --border-gray: oklch(80% 3% 200); /* Gray for borders */
-    /* ADD the rest of the color definitions here if needed! */
+    color-scheme: light dark;
+    border-bottom-color: var(--border-color);
 }
 
 /* STEP 1: Prevent content from getting too wide */
 body {
-    font: 100%/1.5 system-ui; /* 100% font size, 1.5 line height, system font. Same as in lab 1 */
+    font-family: var(--font-primary); /* Sets the primary font */
+    font-weight: 300;
+    font-size: 100%;
+    line-height: 1.6; /* Better readability */
     max-width: 95ch; /* Limits width to 50 rems for better readability */
     margin-inline: auto;
     padding: 10px;
@@ -62,8 +67,9 @@ nav a:hover {
     color:black
 }
 
-h1, h2 {
-    font-family: "Helvetica", sans-serif;
+h1, h2, h3, h4, h5, h6, p, nav, a {
+    font-family: var(--font-primary);
+    font-weight: 300;
 }
 
 p, nav, a {
@@ -103,7 +109,7 @@ p, nav, a {
         display: grid;
         grid-template-columns: subgrid;
         grid-column: 1 / -1;
-        align-self: center;;
+        align-self: center;
     }
 
     input, textarea, button {
@@ -147,16 +153,8 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
 }
 
-/* STEP 5: Style your CV */
-
-    /* HINT: one thing you could do here is define an ID selector in your resume/index.html -> <section id="resume"> 
-             and then you can generate a layour just for your resume
-             For example:
-    */
-/*#resume { /* Use this # as your ID selector */ 
-        /*max-width: 50rem;
-        /* ... */ 
-/*    }
-    
-
+nav {
+	--border-color: oklch(50% 10% 200 / 40%);
+	/* ... other styles and nested rules ... */
+}
     

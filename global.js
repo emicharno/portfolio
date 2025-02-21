@@ -77,7 +77,6 @@ for (let p of pages) {
 
 // STEP 4
 // step 4.1
-// TODO: Inside your styles.css file, adjust your navigation menu colors! There is nothing to do in this file in this step.
 
 // step 4.2
 document.body.insertAdjacentHTML("afterbegin", `
