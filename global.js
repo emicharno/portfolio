@@ -18,39 +18,40 @@ function $$ (selector, context = document) {
 // }
 
 // STEP 3
-// TODO: Remove <nav> menu from all HTML pages!
-// TODO: Comment out the step 2 code in this file!
 
 // step 3.1
 let pages = [
 	{url: "", title: "Home"},
+    {url: "contact/", title: "Contact"},
 	{url: "projects/", title: "Projects"},
-	// TODO: add the rest of your pages here
+    {url: "resume/", title: "Resume"},
+    {url: "https://github.com/emicharno/", title: "GitHub"},
 ];
 
-let nav = document.createElement("TODO: FILL IN!!");
-document.body.prepend("TODO: FILL IN!!");
+let nav = document.createElement("nav");
+document.body.prepend(nav);
 
-// TODO: Inside index.html (our home page), add a class="home" attribute to the <html lang="en"> element!
+//initializing variable before the for loop to check if we are on the home page
+//const keyword makes the variable immutable so it cannot be reassigned
+//variables that do not change should be declared with const (also use capital letters as the convention)
 const ARE_WE_HOME = document.documentElement.classList.contains("home");
 
-for (let p of pages) {
-	let url = p.url;
-	let title = p.title;
+// for (let p of pages) {
+// 	let url = p.url;
+// 	let title = p.title;
 
-	// Create link and add it to nav 
-    if (!ARE_WE_HOME && !url.startsWith("http")) {
-        url = "TODO: FILL IN RELATIVE URL"
-    }
+// 	// Create link and add it to nav 
+//     if (!ARE_WE_HOME && !url.startsWith("http")) {
+//         url = "../" + url;
+//     }
 
-	nav.insertAdjacentHTML("beforeend", `<a href="${ url }">${ title }</a>` );
-}
-
+// 	nav.insertAdjacentHTML("beforeend", `<a href="${ url }">${ title }</a>` );
+// }
 
 // step 3.2
 // TODO: Comment out the `for (let p of pages) {...}` loop you made in step 3.1 and uncomment the for loop below! I have helped you restructure the loop a bit in a way that may be confusing from the lab instructions
 
-/* for (let p of pages) {
+for (let p of pages) {
 	let url = p.url;
 	let title = p.title;
 
@@ -59,20 +60,20 @@ for (let p of pages) {
         url = "../" + url;
     }
 
-    let a = document.createElement("TODO: create an <a> element!");
+    let a = document.createElement("a");
     a.href = url;
     a.textContent = title;
     
     if (a.host === location.host && a.pathname === location.pathname) {
-        a.classList.add("TODO: FILL IN CLASS NAME");
+        a.classList.add("current");
     }
 
-    if ("TODO: FILL IN CONDITION TO OPEN LINK IN NEW TAB") {
+    if (a.host !== location.host) {
         a.target = "_blank";
     }
 
     nav.append(a);
-} */
+}
 
 // STEP 4
 // step 4.1
