@@ -83,7 +83,7 @@ document.body.insertAdjacentHTML("afterbegin", `
 	<label class="color-scheme">
 		Theme:
 		<select>
-			<option value="light dark">Auto</option>
+			<option value="light dark"> Auto</option>
             <option value="dark">Dark</option>
             <option value="light">Light</option>
 		</select>
@@ -94,12 +94,12 @@ document.body.insertAdjacentHTML("afterbegin", `
 // TODO: Inside your styles.css file, add styling to move the switcher with class .color-scheme to the top right corner. There is nothing to do in this file in this step
 
 // step 4.4
-let select = document.querySelector("TODO: FILL IN SELECTOR");
+let select = document.querySelector("select");
 
 select.addEventListener("input", function (event) {
 	console.log("color scheme changed to", event.target.value);
 
-    // TODO: use document.documentElement.style.setProperty to set the color scheme here! (hint: take a look at the handout)
+    document.documentElement.style.setProperty("color-scheme", event.target.value);
 
     // TODO: (step 4.5.1) uncomment the line below!
     // localStorage.colorScheme = event.target.value;
