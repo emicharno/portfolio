@@ -82,8 +82,10 @@ p, nav, a {
     /* (you do not need to make any changes here for step 2.1, but please take note of it!) */
     input,
     textarea,
-    button {
+    button,
+    select {
         font: inherit; /* Ensures form elements use the same font as the body */
+    font: 80%
     }
     
     /* Step 3.2: Top-down layout */
@@ -112,7 +114,7 @@ p, nav, a {
         align-self: center;
     }
 
-    input, textarea, button {
+    input, textarea, button{
         grid-column: 2;
         align-self: start;
     }
@@ -157,4 +159,15 @@ nav {
 	--border-color: oklch(50% 10% 200 / 40%);
 	/* ... other styles and nested rules ... */
 }
+
+/* STEP 4.3: Placing the switcher at the top right corner */
+.color-scheme {
+    position: absolute; /* Takes it out of the normal document flow */
+    top: 0.5rem; /* Distance from the top */
+    right: -1rem; /* Distance from the right */
+    display: inline-flex; /* Ensures label and select dropdown are inline */
+    gap: 4px; /* Adds spacing between the label and dropdown */
+    align-items: center; /* Aligns label and dropdown vertically */
+}
+
     

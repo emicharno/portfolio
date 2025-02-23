@@ -83,9 +83,9 @@ document.body.insertAdjacentHTML("afterbegin", `
 	<label class="color-scheme">
 		Theme:
 		<select>
-			<option value="light dark">TODO: ADD OPTION LABEL HERE</option>
-            <option value="dark">TODO: ADD OPTION LABEL HERE</option>
-            TODO: ADD LIGHT MODE OPTION HERE!
+			<option value="light dark">Auto</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
 		</select>
 	</label>`
 );
