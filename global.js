@@ -102,15 +102,17 @@ select.addEventListener("input", function (event) {
     document.documentElement.style.setProperty("color-scheme", event.target.value);
 
     // TODO: (step 4.5.1) uncomment the line below!
-    // localStorage.colorScheme = event.target.value;
+    localStorage.colorScheme = event.target.value;
 });
 
 
 // step 4.5 (continued)
 // Reminder: uncomment line inside the event listener for 4.5.1
-if ("colorScheme" in localStorage) {
-    // TODO: set color scheme to the stored local value (hint: look at handout)
+if (localStorage.colorScheme) {
+	document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
+	select.value = localStorage.colorScheme;
 }
+
 
 // STEP 5 (OPTIONAL)
 // Note: This is an optional part of the lab! If you want to do it, uncomment the lines below and fill in the TODOs. Otherwise, leave the lines commented out.
@@ -124,13 +126,13 @@ if ("colorScheme" in localStorage) {
 //     event.preventDefault();
 //     let data = new FormData(form);
 
-    // let url = form.action + "?";
-    // for (let [name, value] of data) {
-	//     url += (name + "=" + value + "&")
-	//     console.log(name, value);
-    // }
+//     let url = form.action + "?";
+//     for (let [name, value] of data) {
+// 	    url += (name + "=" + value + "&")
+// 	    console.log(name, value);
+//     }
 
-        // TODO: open url here!
+//         TODO: open url here!
 // })
 
 
